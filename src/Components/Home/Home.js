@@ -19,20 +19,23 @@ const Home = () => {
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste dolorem accusamus ipsam aspernatur iure. 
                         Maiores eaque recusandae accusantium praesentium 
                         molestiae quod repellendus soluta expedita, sit illo labore saepe rerum dolor?</p>
+                        <button className='btn text-white' style={{backgroundColor:"rgb(236 72 153)"}}> Live demo</button>
                     </div>
+                    
                 </div>
                 <div className="col-12 col-md-5">
                     <img src="https://img.freepik.com/free-photo/laptop-pencils-arrangement_23-2148128294.jpg?w=740&t=st=1649037983~exp=1649038583~hmac=71cea765a034a57a287e6332c718cd5a9fe2673d7ea257e7e80f51a3ddb65c32" className='img-fluid rounded-3' alt="" />
                 </div>
             </div>
+            <h3 className=' text-center mb-5'>Customer Reviews(3)</h3>
             <div className="row row-cols-1 row-cols-md-3 g-3">
             {
                 threeReviews.map(review => <Review key={review.id} review={review}></Review>)
             }
             </div>
-            <div className="d-flex justify-content-center">
+            <div className="d-flex justify-content-end mb-5">
             <button onClick={() => navigate('/reviews')} className='btn text-white d-flex align-items-center rounded-pill px-4 py-2 mt-3 ' style={{backgroundColor:"rgb(236 72 153)"}}>
-                See more
+                See All Reviews
                 <span><FontAwesomeIcon className=' ms-2' icon={(faArrowRight)}> </FontAwesomeIcon></span>
             </button>
             </div>
