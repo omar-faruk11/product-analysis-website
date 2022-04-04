@@ -31,7 +31,7 @@ const Home = () => {
             }
             </div>
             <div className="d-flex justify-content-center">
-            <button onClick={() => navigate('/reviews')} className='btn text-white d-flex align-items-center rounded-pill px-4 py-2 my-5 ' style={{backgroundColor:"rgb(236 72 153)"}}>
+            <button onClick={() => navigate('/reviews')} className='btn text-white d-flex align-items-center rounded-pill px-4 py-2 mt-3 ' style={{backgroundColor:"rgb(236 72 153)"}}>
                 See more
                 <span><FontAwesomeIcon className=' ms-2' icon={(faArrowRight)}> </FontAwesomeIcon></span>
             </button>
