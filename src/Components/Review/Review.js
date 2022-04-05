@@ -21,7 +21,7 @@ const Review = ({ review }) => {
                     readonly
                 ></Rating>
             </div>
-                <p>{comment}</p>
+                <p>{comment.slice(0,150)}.</p>
             </div>
         </div>
     );

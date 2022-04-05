@@ -1,5 +1,5 @@
 import React from 'react';
-import { Legend, Line, LineChart, Pie, PieChart, Tooltip, XAxis, YAxis } from 'recharts';
+import { Legend, Line, LineChart, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
 
 const Dashboard = () => {
@@ -46,7 +46,8 @@ const Dashboard = () => {
             <div className='row row-cols-1 row-cols-md-2 mt-4'>
                 <div className="col">
                     <h5 className="text-center text-uppercase text-primary">month wise sell</h5>
-                    <LineChart width={450} height={250} data={chartData}
+                   <ResponsiveContainer width='100%' height={350}>
+                   <LineChart  data={chartData}
                         margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                         <XAxis dataKey="month" />
                         <YAxis />
@@ -54,16 +55,19 @@ const Dashboard = () => {
                         <Legend />
                         <Line type="monotone" dataKey="sell" stroke="#8884d8" />
                     </LineChart>
+                   </ResponsiveContainer>
                 </div>
                 <div className="col">
                     <h5 className="text-center text-uppercase text-primary">investment vs revenue</h5>
                     <div className="d-flex align-items-center justify-content-center">
                     <div>
-                    <PieChart width={730} height={250}>
+                   <ResponsiveContainer minHeight={240} width={350} height={350}>
+                   <PieChart>
                     <Tooltip />
                         <Pie data={chartData} dataKey="investment" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" />
                         <Pie data={chartData} dataKey="revenue" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label />
                     </PieChart>
+                   </ResponsiveContainer>
                     </div>
                     </div>
                 </div>

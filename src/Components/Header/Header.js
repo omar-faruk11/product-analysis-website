@@ -2,25 +2,27 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Header = () => {
-    const textDecortion = { textDecoration: 'none',padding:'5px' }
+    let itactive = {color:'rgb(236 72 153)', textDecoration:'none'}
+    let notactive = {color:'#212529', textDecoration:'none'}
+    
     return (
-        <nav className=' d-flex justify-content-center align-items-center p-3 bg-light text-uppercase '>
-                <div className=' mx-4 fw-bold'>
-                    <NavLink className={({ isActive }) => isActive ? 'text-danger' : 'text-dark'} style={textDecortion} to='/'> Home</NavLink>
+        <div className=' d-flex justify-content-center align-items-center px-0 px-md-3 py-3 bg-light text-uppercase '>
+                <div className=' mx-2 mx-md-4 fw-bold '>
+                    <NavLink style={({ isActive }) => isActive? itactive : notactive}  to='/'> Home</NavLink>
                 </div>
-                <div className=" mx-4 fw-bold">
-                    <NavLink className={({ isActive }) => isActive ? 'text-danger' : 'text-dark'} style={textDecortion} to='/reviews'>Reviews</NavLink>
+                <div className=" mx-1 mx-md-4 fw-bold ">
+                    <NavLink style={({ isActive }) => isActive? itactive : notactive}  to='/reviews'>Reviews</NavLink>
                 </div>
-                <div className=" mx-4 fw-bold">
-                    <NavLink className={({ isActive }) => isActive ? 'text-danger' : 'text-dark'} style={textDecortion} to='/dashboard'> Dashboad</NavLink>
+                <div className=" mx-1 mx-md-4 fw-bold ">
+                    <NavLink style={({ isActive }) => isActive? itactive : notactive}  to='/dashboard'> Dashboad</NavLink>
                 </div>
-                <div className=" mx-4 fw-bold">
-                    <NavLink className={({ isActive }) => isActive ? 'text-danger' : 'text-dark'} style={textDecortion} to='/blogs'> Blogs</NavLink>
+                <div className=" mx-1 mx-md-4 fw-bold ">
+                    <NavLink style={({ isActive }) => isActive? itactive : notactive}  to='/blogs'> Blogs</NavLink>
                 </div>
-                <div className=" mx-4 fw-bold">
-                    <NavLink className={({ isActive }) => isActive ? 'text-danger' : 'text-dark'} style={textDecortion} to='/about'>About</NavLink>
+                <div className=" mx-1 mx-md-4 fw-bold ">
+                    <NavLink style={({ isActive }) => isActive? itactive : notactive}  to='/about'>About</NavLink>
                 </div>
-        </nav>
+        </div>
     );
 };
 

@@ -11,20 +11,17 @@ const Home = () => {
     const navigate = useNavigate()
     return (
         <div className='container'>
-            <div className="row  my-5">
-                <div className="col-12 col-md-7 d-flex align-items-center">
+            <div className="row gy-5 g-md-5 mt-1 mb-5 my-md-5 " >
+                <div className="col-12 col-md-7 order-1 order-md-0 d-flex align-items-center ">
                     <div>
-                    <h2 className='display-6 fw-bold text-uppercase'>Your choose is the best choose</h2>
-                    <h2 className='display-6 fw-bold text-uppercase'>You are the best </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste dolorem accusamus ipsam aspernatur iure. 
-                        Maiores eaque recusandae accusantium praesentium 
-                        molestiae quod repellendus soluta expedita, sit illo labore saepe rerum dolor?</p>
+                    <h2 className='display-6 fw-bold text-uppercase'>Your Next Laptop <br /> <span style={{color :"rgb(236 72 153)"}}>best Laptop</span></h2>
+                    <p>The Best product for you. our product may the best proudct for you.You can buy. <br /> we have good collection of various brands for Laptops</p>
                         <button className='btn text-white' style={{backgroundColor:"rgb(236 72 153)"}}> Live demo</button>
                     </div>
                     
                 </div>
-                <div className="col-12 col-md-5">
-                    <img src="https://img.freepik.com/free-photo/laptop-pencils-arrangement_23-2148128294.jpg?w=740&t=st=1649037983~exp=1649038583~hmac=71cea765a034a57a287e6332c718cd5a9fe2673d7ea257e7e80f51a3ddb65c32" className='img-fluid rounded-3' alt="" />
+                <div className="col-12 col-md-5 order-0 order-md-1 ">
+                    <img src="https://cdn.pocket-lint.com/r/s/1200x630/assets/images/139319-laptops-news-buyer-s-guide-which-apple-macbook-is-best-for-you-macbook-air-or-macbook-pro-image13-gpzfht5rnc.jpg" className='img-fluid rounded-3' alt="" />
                 </div>
             </div>
             <h3 className=' text-center mb-5'>Customer Reviews(3)</h3>
